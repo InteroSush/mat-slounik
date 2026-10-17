@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Матэматычны слоўнік</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Структура: загаловак → картка пошуку (мова, рэжым, поле) → вобласць са старонкамі -->
+<div class="wrap">
+<header>
+ <h1>Матэматычны слоўнік</h1>
+ <button id="theme" title="Змяніць тэму" aria-label="Змяніць тэму">Тэма</button>
+</header>
+
+<div id="error" class="err hidden"></div>
+
+<!-- Картка пошуку. Тэксты кнопак можна змяняць тут -->
+<div class="card">
+ <div class="controls">
+  <span class="seg" id="langSeg"><button data-l="ru" class="on">Руская</button><button data-l="be">Беларуская</button></span>
+  <span class="seg" id="modeSeg"><button data-m="1">Адна старонка</button><button data-m="2" class="on">Дзве старонкі</button></span>
+ </div>
+ <input type="text" id="q" placeholder="Увядзіце слова або яго пачатак…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Слова для пошуку">
+ <p class="hint" id="hint" aria-live="polite"></p>
+ <div class="chips hidden" id="chips"></div>
+</div>
+
+<!-- Сюды script.js уставляе старонкі (карцінкі) -->
+<div class="view">
+ <div class="nav hidden" id="nav">
+  <button id="prev">← Назад</button><span id="pn"></span><button id="next">Далей →</button>
+ </div>
+ <div class="pages two" id="pages"></div>
+ <div class="empty" id="empty">Увядзіце слова, і тут з'явіцца патрэбная старонка.</div>
+</div>
+<footer>Падказка: націсніце на старонку, каб павялічыць. Стрэлкі ← → на клавіятуры гартаюць старонкі.</footer>
+</div>
+<div id="zoom" class="hidden"><img alt=""></div>
+
+<script src="script.js"></script>
+</body>
+</html>
