@@ -33,7 +33,7 @@ const SHELL_FILES = [
 const TOTAL_PAGES = 243;
 
 // Папка і пашырэнне сканаў — як у script.js
-const IMAGE_FOLDER = '1-png_renders';
+const IMAGE_FOLDER = 'pages';
 const IMAGE_EXTENSION = 'png';
 
 /* ================================================================== */

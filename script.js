@@ -24,7 +24,7 @@
    1. НАЛАДЫ — змяняйце толькі гэты блок
    ===================================================================== */
 
-const IMAGE_FOLDER = '1-png_renders';           // папка са сканамі (pages/010.png)
+const IMAGE_FOLDER = 'pages';           // папка са сканамі (pages/010.png)
 const IMAGE_EXTENSION = 'png';          // пашырэнне сканаў
 const RUSSIAN_INDEX_FILE = 'index_ru.json';    // рускі індэкс (першыя словы старонак)
 const BELARUSIAN_INDEX_FILE = 'index_bel.json'; // беларускі індэкс (усе словы)
