@@ -34,7 +34,7 @@ const TOTAL_PAGES = 243;
 
 // Папка і пашырэнне сканаў — як у script.js
 const IMAGE_FOLDER = 'pages';
-const IMAGE_EXTENSION = 'png';
+const IMAGE_EXTENSION = 'webp';
 
 /* ================================================================== */
 
