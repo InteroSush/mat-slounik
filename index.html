@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Матэматычны слоўнік</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#8c3b1e">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Слоўнік">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,5 +47,16 @@
 <div id="zoom" class="hidden"><img alt=""></div>
 
 <script src="script.js"></script>
+
+<!-- PWA: рэгіструем service worker (sw.js), каб сайт можна было ўсталяваць і ён працаваў без інтэрнэту -->
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (error) {
+            console.warn('Service worker не зарэгістраваўся:', error);
+        });
+    });
+}
+</script>
 </body>
 </html>
